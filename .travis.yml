@@ -8,5 +8,4 @@ script:
 – mono ./testrunner/NUnit.Runners.3.10.1/tools/nunit-console.exe  ./SampleTest.Test/bin/Release/SampleTest.Test.dll
 notifications:
   email:
-    - linhtk8@gmail.com
 	- linhvv@tiin.vn
