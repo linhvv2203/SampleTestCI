@@ -1,8 +1,8 @@
 language: csharp
 solution: SampleTest.sln
-before_install:
-  - sudo apt-get install nunit-console
-before_script:
+install:
   - nuget restore SampleTest.sln
-after_script:
-- nunit-console SampleTest.Test/bin/Release/SampleTest.Test.dll
+  - nuget install NUnit.Runners -Version 3.10.1 -OutputDirectory testrunner
+script:
+– xbuild /p:Configuration=Release SampleTest.sln
+– mono ./testrunner/NUnit.Runners.3.10.1/tools/nunit-console.exe  ./SampleTest.Test/bin/Release/SampleTest.Test.dll
