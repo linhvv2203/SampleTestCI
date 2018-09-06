@@ -6,3 +6,6 @@ install:
 script:
 – xbuild /p:Configuration=Release SampleTest.sln
 – mono ./testrunner/NUnit.Runners.*/tools/nunit-console.exe  ./SampleTest.Test/bin/Release/SampleTest.Test.dll
+notifications:
+  email:
+    - linhtk8@gmail.com
